@@ -23,5 +23,11 @@ kafka-console-producer --broker-list localhost:9092 --topic test
 - Read message
 
 ```
-kafka-console-consumer --bootstrap-server localhost:9092 --topic test --from-beginning
+kafka-console-consumer --bootstrap-server localhost:9092 --topic test --from-beginning --consumer-property group.id=demo
+```
+
+- Check consumer offsets
+
+```
+kafka-consumer-groups --bootstrap-server localhost:9092 --group demo --describe
 ```
