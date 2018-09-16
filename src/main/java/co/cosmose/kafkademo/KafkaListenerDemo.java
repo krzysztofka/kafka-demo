@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class KafkaListenerDemo {
 
-    @KafkaListener(topics = "test")
+    @KafkaListener(topics = "orders")
     public void consume(ConsumerRecord<?, ?> record) {
         System.out.println("Received: " + record);
     }
